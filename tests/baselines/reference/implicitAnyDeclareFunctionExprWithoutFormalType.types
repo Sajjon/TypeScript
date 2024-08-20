@@ -20,8 +20,8 @@ var lambd2 = (ll1, ll2: string) => { }  // Error at "ll1"
 >ll2 : string
 >    : ^^^^^^
 
-var lamda3 = function myLambda3(myParam) { }
->lamda3 : (myParam: any) => void
+var lambda3 = function myLambda3(myParam) { }
+>lambda3 : (myParam: any) => void
 >       : ^       ^^^^^^^^^^^^^^
 >function myLambda3(myParam) { } : (myParam: any) => void
 >                                : ^       ^^^^^^^^^^^^^^
@@ -30,8 +30,8 @@ var lamda3 = function myLambda3(myParam) { }
 >myParam : any
 >        : ^^^
 
-var lamda4 = () => { return null };
->lamda4 : () => any
+var lambda4 = () => { return null };
+>lambda4 : () => any
 >       : ^^^^^^^^^
 >() => { return null } : () => any
 >                      : ^^^^^^^^^

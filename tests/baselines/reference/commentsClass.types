@@ -1,7 +1,7 @@
 //// [tests/cases/compiler/commentsClass.ts] ////
 
 === commentsClass.ts ===
-/** This is class c2 without constuctor*/
+/** This is class c2 without constructor*/
 class c2 {
 >c2 : c2
 >   : ^^

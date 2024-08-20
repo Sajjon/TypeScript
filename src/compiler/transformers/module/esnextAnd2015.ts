@@ -271,7 +271,7 @@ export function transformECMAScriptModule(context: TransformationContext): (x: S
             return node;
         }
 
-        // Either ill-formed or don't need to be tranformed.
+        // Either ill-formed or don't need to be transformed.
         if (!node.exportClause || !isNamespaceExport(node.exportClause) || !node.moduleSpecifier) {
             return node;
         }

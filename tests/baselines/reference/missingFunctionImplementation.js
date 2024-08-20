@@ -70,7 +70,7 @@ namespace N10 {
   export function m(a): void { }
 }
 
-// merged namespaces, duplicate defintions
+// merged namespaces, duplicate definitions
 namespace N12 {
   export function m(a): void;
   export function m(): void;
@@ -155,7 +155,7 @@ var N10;
     function m(a) { }
     N10.m = m;
 })(N10 || (N10 = {}));
-// merged namespaces, duplicate defintions
+// merged namespaces, duplicate definitions
 var N12;
 (function (N12) {
     function m(a) { }

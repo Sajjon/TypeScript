@@ -635,7 +635,7 @@ function resolvingModuleSpecifiers<TReturn>(
     // Import statement completions always need specifier resolution because the module specifier is
     // part of their `insertText`, not the `codeActions` creating edits away from the cursor.
     // Finally, `autoImportSpecifierExcludeRegexes` necessitates eagerly resolving module specifiers
-    // because completion items are being explcitly filtered out by module specifier.
+    // because completion items are being explicitly filtered out by module specifier.
     const needsFullResolution = isForImportStatementCompletion
         || getResolvePackageJsonExports(program.getCompilerOptions())
         || preferences.autoImportSpecifierExcludeRegexes?.length;
@@ -3709,7 +3709,7 @@ function getCompletionData(
                         }
                     }
 
-                    // If the module is merged with a value, we must get the type of the class and add its propertes (for inherited static methods).
+                    // If the module is merged with a value, we must get the type of the class and add its properties (for inherited static methods).
                     if (
                         !isTypeLocation &&
                         !insideJsDocTagTypeExpression &&
@@ -5144,7 +5144,7 @@ function getCompletionData(
     /**
      * Filters out completion suggestions for class elements.
      *
-     * @returns Symbols to be suggested in an class element depending on existing memebers and symbol flags
+     * @returns Symbols to be suggested in an class element depending on existing members and symbol flags
      */
     function filterClassMembersList(baseSymbols: readonly Symbol[], existingMembers: readonly ClassElement[], currentClassElementModifierFlags: ModifierFlags): Symbol[] {
         const existingMemberNames = new Set<__String>();
@@ -5969,7 +5969,7 @@ function isDeprecated(symbol: Symbol, checker: TypeChecker) {
 
 /**
  * True if the first character of `lowercaseCharacters` is the first character
- * of some "word" in `identiferString` (where the string is split into "words"
+ * of some "word" in `identifierString` (where the string is split into "words"
  * by camelCase and snake_case segments), then if the remaining characters of
  * `lowercaseCharacters` appear, in order, in the rest of `identifierString`.
  *

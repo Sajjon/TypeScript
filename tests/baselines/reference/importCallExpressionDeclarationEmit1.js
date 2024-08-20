@@ -10,7 +10,7 @@ import(getSpecifier());
 
 var p0 = import(`${directory}\\${moduleFile}`);
 var p1 = import(getSpecifier());
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
 
 function returnDynamicLoad(path: string) {
     return import(path);
@@ -20,7 +20,7 @@ function returnDynamicLoad(path: string) {
 Promise.resolve(`${getSpecifier()}`).then(s => require(s));
 var p0 = Promise.resolve(`${`${directory}\\${moduleFile}`}`).then(s => require(s));
 var p1 = Promise.resolve(`${getSpecifier()}`).then(s => require(s));
-const p2 = Promise.resolve(`${whatToLoad ? getSpecifier() : "defaulPath"}`).then(s => require(s));
+const p2 = Promise.resolve(`${whatToLoad ? getSpecifier() : "defaultPath"}`).then(s => require(s));
 function returnDynamicLoad(path) {
     return Promise.resolve(`${path}`).then(s => require(s));
 }

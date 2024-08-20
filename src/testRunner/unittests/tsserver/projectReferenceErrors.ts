@@ -16,7 +16,7 @@ import {
 } from "../helpers/virtualFileSystemWithWatch.js";
 
 describe("unittests:: tsserver:: projectReferenceErrors:: with project references and error reporting", () => {
-    const dependecyLocation = `/user/username/projects/myproject/dependency`;
+    const dependencyLocation = `/user/username/projects/myproject/dependency`;
     const usageLocation = `/user/username/projects/myproject/usage`;
 
     function verifyUsageAndDependency(scenario: string, dependencyTs: File, dependencyConfig: File, usageTs: File, usageConfig: File) {
@@ -53,10 +53,10 @@ describe("unittests:: tsserver:: projectReferenceErrors:: with project reference
             });
         });
 
-        describe("when the depedency file is open", () => {
+        describe("when the dependency file is open", () => {
             verifyGetErrScenario({
                 scenario: "projectReferenceErrors",
-                subScenario: `${scenario} when the depedency file is open`,
+                subScenario: `${scenario} when the dependency file is open`,
                 allFiles: () => [dependencyTs, dependencyConfig, usageTs, usageConfig],
                 openFiles: () => [usageTs, dependencyTs],
                 getErrRequest: () => [usageTs, dependencyTs],
@@ -79,7 +79,7 @@ describe("unittests:: tsserver:: projectReferenceErrors:: with project reference
 
     describe("with module scenario", () => {
         const dependencyTs: File = {
-            path: `${dependecyLocation}/fns.ts`,
+            path: `${dependencyLocation}/fns.ts`,
             content: `export function fn1() { }
 export function fn2() { }
 // Introduce error for fnErr import in main
@@ -88,7 +88,7 @@ export function fn2() { }
 export let x: string = 10;`,
         };
         const dependencyConfig: File = {
-            path: `${dependecyLocation}/tsconfig.json`,
+            path: `${dependencyLocation}/tsconfig.json`,
             content: jsonToReadableText({ compilerOptions: { composite: true, declarationDir: "../decls" } }),
         };
         const usageTs: File = {
@@ -115,7 +115,7 @@ fnErr();
 
     describe("with non module --out", () => {
         const dependencyTs: File = {
-            path: `${dependecyLocation}/fns.ts`,
+            path: `${dependencyLocation}/fns.ts`,
             content: `function fn1() { }
 function fn2() { }
 // Introduce error for fnErr import in main
@@ -124,7 +124,7 @@ function fn2() { }
 let x: string = 10;`,
         };
         const dependencyConfig: File = {
-            path: `${dependecyLocation}/tsconfig.json`,
+            path: `${dependencyLocation}/tsconfig.json`,
             content: jsonToReadableText({ compilerOptions: { composite: true, outFile: "../dependency.js" } }),
         };
         const usageTs: File = {

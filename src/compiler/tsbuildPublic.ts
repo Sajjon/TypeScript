@@ -280,7 +280,7 @@ export interface SolutionBuilder<T extends BuilderProgram> {
 }
 
 /**
- * Create a function that reports watch status by writing to the system and handles the formating of the diagnostic
+ * Create a function that reports watch status by writing to the system and handles the formatting of the diagnostic
  */
 export function createBuilderStatusReporter(system: System, pretty?: boolean): DiagnosticReporter {
     return diagnostic => {
@@ -1728,7 +1728,7 @@ function getUpToDateStatusWorker<T extends BuilderProgram>(state: SolutionBuilde
             }
 
             // If the upstream project has only change .d.ts files, and we've built
-            // *after* those files, then we're "psuedo up to date" and eligible for a fast rebuild
+            // *after* those files, then we're "pseudo up to date" and eligible for a fast rebuild
             const newestDeclarationFileContentChangedTime = getLatestChangedDtsTime(state, resolvedConfig.options, resolvedRefPath);
             if (newestDeclarationFileContentChangedTime && newestDeclarationFileContentChangedTime <= oldestOutputFileTime) {
                 pseudoUpToDate = true;

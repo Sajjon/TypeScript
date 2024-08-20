@@ -11,13 +11,13 @@ var lambd2 = (ll1, ll2: string) => { }  // Error at "ll1"
 >ll1 : Symbol(ll1, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 2, 14))
 >ll2 : Symbol(ll2, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 2, 18))
 
-var lamda3 = function myLambda3(myParam) { }
->lamda3 : Symbol(lamda3, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 3, 3))
+var lambda3 = function myLambda3(myParam) { }
+>lambda3 : Symbol(lambda3, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 3, 3))
 >myLambda3 : Symbol(myLambda3, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 3, 12))
 >myParam : Symbol(myParam, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 3, 32))
 
-var lamda4 = () => { return null };
->lamda4 : Symbol(lamda4, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 4, 3))
+var lambda4 = () => { return null };
+>lambda4 : Symbol(lambda4, Decl(implicitAnyDeclareFunctionExprWithoutFormalType.ts, 4, 3))
 
 // these should be error for implicit any return type
 var lambda5 = function temp() { return null; }

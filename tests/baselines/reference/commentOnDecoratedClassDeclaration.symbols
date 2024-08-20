@@ -21,8 +21,8 @@ class Remote { }
 @decorator("hi")
 >decorator : Symbol(decorator, Decl(commentOnDecoratedClassDeclaration.ts, 0, 0))
 
-class AnotherRomote {
->AnotherRomote : Symbol(AnotherRomote, Decl(commentOnDecoratedClassDeclaration.ts, 6, 16))
+class AnotherRemote {
+>AnotherRemote : Symbol(AnotherRemote, Decl(commentOnDecoratedClassDeclaration.ts, 6, 16))
 
     constructor() {}
 }

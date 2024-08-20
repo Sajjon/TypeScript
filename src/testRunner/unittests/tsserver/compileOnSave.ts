@@ -786,7 +786,7 @@ describe("unittests:: tsserver:: compileOnSave:: EmitFile test", () => {
         baselineTsserverLogs("compileOnSave", "emit specified file", session);
     });
 
-    it("shoud not emit js files in external projects", () => {
+    it("should not emit js files in external projects", () => {
         const file1 = {
             path: "/a/b/file1.ts",
             content: "consonle.log('file1');",
@@ -853,7 +853,7 @@ describe("unittests:: tsserver:: compileOnSave:: EmitFile test", () => {
         it("with rich Response set to false", () => {
             verify(/*richResponse*/ false);
         });
-        it("with rich Repsonse", () => {
+        it("with rich Response", () => {
             verify(/*richResponse*/ true);
         });
 
@@ -894,7 +894,7 @@ describe("unittests:: tsserver:: compileOnSave:: EmitFile test", () => {
                 command: ts.server.protocol.CommandTypes.CompileOnSaveEmitFile,
                 arguments: { file: file2.path, richResponse },
             });
-            baselineTsserverLogs("compileOnSave", `emit with richRepsonse as ${richResponse}`, session);
+            baselineTsserverLogs("compileOnSave", `emit with richResponse as ${richResponse}`, session);
         }
     });
 

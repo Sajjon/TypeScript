@@ -446,8 +446,8 @@ module m {
 >  : ^^^^^
     }
 
-    lable: let l2 = 0;
->lable : any
+    label: let l2 = 0;
+>label : any
 >      : ^^^
 >l2 : number
 >   : ^^^^^^

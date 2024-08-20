@@ -2486,7 +2486,7 @@ export function createProgram(rootNamesOrOptions: readonly string[] | CreateProg
         const modifiedSourceFiles: SourceFile[] = [];
         structureIsReused = StructureIsReused.Completely;
 
-        // If the missing file paths are now present, it can change the progam structure,
+        // If the missing file paths are now present, it can change the program structure,
         // and hence cant reuse the structure.
         // This is same as how we dont reuse the structure if one of the file from old program is now missing
         if (forEachEntry(oldProgram.getMissingFilePaths(), missingFileName => host.fileExists(missingFileName))) {
@@ -3364,7 +3364,7 @@ export function createProgram(rootNamesOrOptions: readonly string[] | CreateProg
             }
 
             // Since these are syntactic diagnostics, parent might not have been set
-            // this means the sourceFile cannot be infered from the node
+            // this means the sourceFile cannot be inferred from the node
             function createDiagnosticForNode(node: Node, message: DiagnosticMessage, ...args: DiagnosticArguments): DiagnosticWithLocation {
                 return createDiagnosticForNodeInSourceFile(sourceFile, node, message, ...args);
             }
@@ -4768,9 +4768,9 @@ export function createProgram(rootNamesOrOptions: readonly string[] | CreateProg
         //   - File is in program because:
         //      - Files reasons listed
         //      - extra reason if its not already processed - this happens in case sensitive file system where files differ in casing and we are giving reasons for two files so reason is not in file's reason
-        //     fyi above whole secton is ommited if we have single reason and we are reporting at that reason's location
+        //     fyi above whole section is omitted if we have single reason and we are reporting at that reason's location
         //   - redirect and additional information about file
-        // So cache result if we havent ommited file include reasons
+        // So cache result if we havent omitted file include reasons
         if (file) {
             if (cachedChain) {
                 // Cache new fileIncludeDetails if we have update

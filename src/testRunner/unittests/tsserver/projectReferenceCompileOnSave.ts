@@ -722,7 +722,7 @@ fn2();
         });
     });
 
-    describe("when the depedency file is open", () => {
+    describe("when the dependency file is open", () => {
         describe("Of usageTs", () => {
             it("with initial file open, without specifying project file", () => {
                 const host = createServerHost([dependencyTs, dependencyConfig, usageTs, usageConfig, libFile]);

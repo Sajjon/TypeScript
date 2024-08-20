@@ -571,7 +571,7 @@ describe("unittests:: reuseProgramStructure:: General", () => {
         });
     });
 
-    it("forceConsistentCasingInFileNames:: handles file preprocessing dignostics", () => {
+    it("forceConsistentCasingInFileNames:: handles file preprocessing diagnostics", () => {
         const files = [
             {
                 name: "/src/project/src/struct.d.ts",
@@ -653,10 +653,10 @@ describe("unittests:: reuseProgramStructure:: General", () => {
             /*useCaseSensitiveFileNames*/ false,
         );
         baselineProgram(baselines, program3);
-        runBaseline("handles file preprocessing dignostics", baselines);
+        runBaseline("handles file preprocessing diagnostics", baselines);
     });
 
-    it("forceConsistentCasingInFileNames:: handles file preprocessing dignostics when diagnostics are not queried", () => {
+    it("forceConsistentCasingInFileNames:: handles file preprocessing diagnostics when diagnostics are not queried", () => {
         const files = [
             {
                 name: "/src/project/src/struct.d.ts",
@@ -770,7 +770,7 @@ describe("unittests:: reuseProgramStructure:: General", () => {
         );
         baselineProgram(baselines, program5);
         baselineDiagnostics(baselines, program4);
-        runBaseline("handles file preprocessing dignostics when diagnostics are not queried", baselines);
+        runBaseline("handles file preprocessing diagnostics when diagnostics are not queried", baselines);
     });
 });
 

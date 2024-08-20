@@ -122,7 +122,7 @@ letDeclarations-scopes.ts(27,1): error TS2410: The 'with' statement is not suppo
            var b2: boolean = l;
         }
     
-        lable: let l2 = 0;
+        label: let l2 = 0;
     }
     
     // methods

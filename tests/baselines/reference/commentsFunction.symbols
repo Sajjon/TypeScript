@@ -38,7 +38,7 @@ var fooFunc = function FooFunctionValue(/** fooFunctionValue param */ b: string)
 >b : Symbol(b, Decl(commentsFunction.ts, 14, 40))
 }
 
-/// lamdaFoo var comment
+/// lambdaFoo var comment
 var lambdaFoo = /** this is lambda comment*/ (/**param a*/a: number, /**param b*/b: number) => a + b;
 >lambdaFoo : Symbol(lambdaFoo, Decl(commentsFunction.ts, 19, 3))
 >a : Symbol(a, Decl(commentsFunction.ts, 19, 46))

@@ -47,12 +47,12 @@ var p1 = import(getSpecifier());
 >getSpecifier : () => string
 >             : ^^^^^^      
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
 >p2 : Promise<any>
 >   : ^^^^^^^^^^^^
->import(whatToLoad ? getSpecifier() : "defaulPath") : Promise<any>
+>import(whatToLoad ? getSpecifier() : "defaultPath") : Promise<any>
 >                                                   : ^^^^^^^^^^^^
->whatToLoad ? getSpecifier() : "defaulPath" : string
+>whatToLoad ? getSpecifier() : "defaultPath" : string
 >                                           : ^^^^^^
 >whatToLoad : boolean
 >           : ^^^^^^^
@@ -60,7 +60,7 @@ const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
 >               : ^^^^^^
 >getSpecifier : () => string
 >             : ^^^^^^      
->"defaulPath" : "defaulPath"
+>"defaultPath" : "defaultPath"
 >             : ^^^^^^^^^^^^
 
 function returnDynamicLoad(path: string) {

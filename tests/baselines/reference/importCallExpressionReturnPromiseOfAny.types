@@ -86,14 +86,14 @@ var p11: Promise<typeof defaultModule> = import(getSpecifier());
 >getSpecifier : () => string
 >             : ^^^^^^      
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath") as Promise<typeof defaultModule>;
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath") as Promise<typeof defaultModule>;
 >p2 : Promise<typeof defaultModule>
 >   : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
->import(whatToLoad ? getSpecifier() : "defaulPath") as Promise<typeof defaultModule> : Promise<typeof defaultModule>
+>import(whatToLoad ? getSpecifier() : "defaultPath") as Promise<typeof defaultModule> : Promise<typeof defaultModule>
 >                                                                                    : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
->import(whatToLoad ? getSpecifier() : "defaulPath") : Promise<any>
+>import(whatToLoad ? getSpecifier() : "defaultPath") : Promise<any>
 >                                                   : ^^^^^^^^^^^^
->whatToLoad ? getSpecifier() : "defaulPath" : string
+>whatToLoad ? getSpecifier() : "defaultPath" : string
 >                                           : ^^^^^^
 >whatToLoad : boolean
 >           : ^^^^^^^
@@ -101,7 +101,7 @@ const p2 = import(whatToLoad ? getSpecifier() : "defaulPath") as Promise<typeof 
 >               : ^^^^^^
 >getSpecifier : () => string
 >             : ^^^^^^      
->"defaulPath" : "defaulPath"
+>"defaultPath" : "defaultPath"
 >             : ^^^^^^^^^^^^
 >defaultModule : typeof defaultModule
 >              : ^^^^^^^^^^^^^^^^^^^^

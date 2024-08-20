@@ -707,7 +707,7 @@ export class A {
 
     verifyTscWatch({
         scenario,
-        subScenario: "correctly parses wild card directories from implicit glob when two keys differ only in directory seperator",
+        subScenario: "correctly parses wild card directories from implicit glob when two keys differ only in directory separator",
         commandLineArgs: ["-w", "--extendedDiagnostics"],
         sys: () => {
             const file1 = {
