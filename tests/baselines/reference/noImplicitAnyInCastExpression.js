@@ -1,7 +1,7 @@
 //// [tests/cases/compiler/noImplicitAnyInCastExpression.ts] ////
 
 //// [noImplicitAnyInCastExpression.ts]
-// verify no noImplictAny errors reported with cast expression
+// verify no noImplicitAny errors reported with cast expression
 
 interface IFoo {
     a: number;
@@ -18,7 +18,7 @@ interface IFoo {
 (<IFoo>{ c: null });
 
 //// [noImplicitAnyInCastExpression.js]
-// verify no noImplictAny errors reported with cast expression
+// verify no noImplicitAny errors reported with cast expression
 // Expr type not assignable to target type
 ({ a: null });
 // Expr type assignable to target type

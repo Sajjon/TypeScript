@@ -231,7 +231,7 @@ module m {
 >l : Symbol(l, Decl(letDeclarations-scopes.ts, 114, 10))
     }
 
-    lable: let l2 = 0;
+    label: let l2 = 0;
 >l2 : Symbol(l2, Decl(letDeclarations-scopes.ts, 118, 14))
 }
 
