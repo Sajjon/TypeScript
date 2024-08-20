@@ -1,7 +1,7 @@
 //// [tests/cases/conformance/types/typeRelationships/typeInference/genericCallWithObjectTypeArgsAndConstraints3.ts] ////
 
 //// [genericCallWithObjectTypeArgsAndConstraints3.ts]
-// Generic call with constraints infering type parameter from object member properties
+// Generic call with constraints inferring type parameter from object member properties
 
 class Base {
     x: string;
@@ -40,7 +40,7 @@ var r6 = f3(x => x, null);
 
 
 //// [genericCallWithObjectTypeArgsAndConstraints3.js]
-// Generic call with constraints infering type parameter from object member properties
+// Generic call with constraints inferring type parameter from object member properties
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
