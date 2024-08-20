@@ -28,12 +28,12 @@ var p1 = import(getSpecifier());
 >getSpecifier : () => boolean
 >             : ^^^^^^       
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
 >p2 : Promise<any>
 >   : ^^^^^^^^^^^^
->import(whatToLoad ? getSpecifier() : "defaulPath") : Promise<any>
+>import(whatToLoad ? getSpecifier() : "defaultPath") : Promise<any>
 >                                                   : ^^^^^^^^^^^^
->whatToLoad ? getSpecifier() : "defaulPath" : boolean | "defaulPath"
+>whatToLoad ? getSpecifier() : "defaultPath" : boolean | "defaultPath"
 >                                           : ^^^^^^^^^^^^^^^^^^^^^^
 >whatToLoad : boolean
 >           : ^^^^^^^
@@ -41,7 +41,7 @@ const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
 >               : ^^^^^^^
 >getSpecifier : () => boolean
 >             : ^^^^^^       
->"defaulPath" : "defaulPath"
+>"defaultPath" : "defaultPath"
 >             : ^^^^^^^^^^^^
 
 p1.then(zero => {

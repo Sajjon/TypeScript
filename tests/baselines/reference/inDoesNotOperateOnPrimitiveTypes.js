@@ -64,7 +64,7 @@ function intersection1<T extends number, U extends 0 | 1 | 2>(thing: T & U) {
 }
 
 function intersection2<T>(thing: T & (0 | 1 | 2)) {
-  "key" in thing; // Error (because all possible instantations are errors)
+  "key" in thing; // Error (because all possible instantiations are errors)
 }
 
 
@@ -114,5 +114,5 @@ function intersection1(thing) {
     "key" in thing; // Error (because all possible instantiations are errors)
 }
 function intersection2(thing) {
-    "key" in thing; // Error (because all possible instantations are errors)
+    "key" in thing; // Error (because all possible instantiations are errors)
 }

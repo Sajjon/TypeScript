@@ -15,7 +15,7 @@ var p1 = import(getSpecifier());
 >p1 : Symbol(p1, Decl(importCallExpressionSpecifierNotStringTypeError.ts, 5, 3))
 >getSpecifier : Symbol(getSpecifier, Decl(importCallExpressionSpecifierNotStringTypeError.ts, 0, 0))
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
 >p2 : Symbol(p2, Decl(importCallExpressionSpecifierNotStringTypeError.ts, 6, 5))
 >whatToLoad : Symbol(whatToLoad, Decl(importCallExpressionSpecifierNotStringTypeError.ts, 1, 11))
 >getSpecifier : Symbol(getSpecifier, Decl(importCallExpressionSpecifierNotStringTypeError.ts, 0, 0))
