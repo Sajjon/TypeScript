@@ -1466,7 +1466,7 @@ export class ProjectService {
                 );
                 return;
             case ActionInvalidate:
-                // Do not clear resolution cache, there was changes detected in typings, so enque typing request and let it get us correct results
+                // Do not clear resolution cache, there was changes detected in typings, so enqueue typing request and let it get us correct results
                 project.enqueueInstallTypingsForProject(/*forceRefresh*/ true);
                 return;
         }
@@ -3916,7 +3916,7 @@ export class ProjectService {
         // a.ts is added as root to inferred project.
         // Now at time of opening c.ts, c.ts is also not aprt of any existing project,
         // so it will be added to inferred project as a root. (for sake of this example assume single inferred project is false)
-        // So at this poing a.ts is part of first inferred project and second inferred project (of which c.ts is root)
+        // So at this point a.ts is part of first inferred project and second inferred project (of which c.ts is root)
         // And hence it needs to be removed from the first inferred project.
         Debug.assert(info.containingProjects.length > 0);
         const firstProject = info.containingProjects[0];
@@ -4137,7 +4137,7 @@ export class ProjectService {
 
     /**
      * Depending on kind
-     * - Find the configuedProject and return it - if allowDeferredClosed is set it will find the deferredClosed project as well
+     * - Find the configuredProject and return it - if allowDeferredClosed is set it will find the deferredClosed project as well
      * - Create - if the project doesnt exist, it creates one as well. If not delayLoad, the project is updated (with triggerFile if passed)
      * - Reload - if the project doesnt exist, it creates one. If not delayLoad, the project is reloaded clearing semantic cache
      *  @internal

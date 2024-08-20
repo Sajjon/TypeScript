@@ -187,12 +187,12 @@ export interface ProgramHost<T extends BuilderProgram> {
 
     /**
      * Use to check file presence for source files and
-     * if resolveModuleNames is not provided (complier is in charge of module resolution) then module files as well
+     * if resolveModuleNames is not provided (compiler is in charge of module resolution) then module files as well
      */
     fileExists(path: string): boolean;
     /**
      * Use to read file text for source files and
-     * if resolveModuleNames is not provided (complier is in charge of module resolution) then module files as well
+     * if resolveModuleNames is not provided (compiler is in charge of module resolution) then module files as well
      */
     readFile(path: string, encoding?: string): string | undefined;
 
@@ -317,7 +317,7 @@ export interface WatchCompilerHostOfConfigFile<T extends BuilderProgram> extends
 
     /**
      * Used to generate source file names from the config file and its include, exclude, files rules
-     * and also to cache the directory stucture
+     * and also to cache the directory structure
      */
     readDirectory(path: string, extensions?: readonly string[], exclude?: readonly string[], include?: readonly string[], depth?: number): string[];
 }

@@ -351,11 +351,11 @@ export namespace Compiler {
             case "string":
                 return value;
             case "number": {
-                const numverValue = parseInt(value, 10);
-                if (isNaN(numverValue)) {
+                const numberValue = parseInt(value, 10);
+                if (isNaN(numberValue)) {
                     throw new Error(`Value must be a number, got: ${JSON.stringify(value)}`);
                 }
-                return numverValue;
+                return numberValue;
             }
             // If not a primitive, the possible types are specified in what is effectively a map of options.
             case "list":

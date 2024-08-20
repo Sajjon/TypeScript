@@ -8466,7 +8466,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                     symAtLocation === unknownSymbol ||
                     // If the symbol is not found, but was not found in the original scope either we probably have an error, don't reuse the node
                     (symAtLocation === undefined && sym !== undefined) ||
-                    // If the symbol is found both in declaration scope and in current scope then it shoudl point to the same reference
+                    // If the symbol is found both in declaration scope and in current scope then it should point to the same reference
                     (symAtLocation && sym && !getSymbolIfSameReference(getExportSymbolOfValueSymbolIfExported(symAtLocation), sym))
                 ) {
                     // In isolated declaration we will not do rest parameter expansion so there is no need to report on these.
@@ -8482,7 +8482,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
             }
 
             if (sym) {
-                // If a parameter is resolvable in the current context it is also visible, so no need to go to symbol accesibility
+                // If a parameter is resolvable in the current context it is also visible, so no need to go to symbol accessibility
                 if (
                     sym.flags & SymbolFlags.FunctionScopedVariable
                     && sym.valueDeclaration
@@ -12939,7 +12939,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                 return isValidBaseType(constraint);
             }
         }
-        // TODO: Given that we allow type parmeters here now, is this `!isGenericMappedType(type)` check really needed?
+        // TODO: Given that we allow type parameters here now, is this `!isGenericMappedType(type)` check really needed?
         // There's no reason a `T` should be allowed while a `Readonly<T>` should not.
         return !!(type.flags & (TypeFlags.Object | TypeFlags.NonPrimitive | TypeFlags.Any) && !isGenericMappedType(type) ||
             type.flags & TypeFlags.Intersection && every((type as IntersectionType).types, isValidBaseType));
@@ -14238,7 +14238,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
             ) {
                 // A reverse mapping of `{[K in keyof T[K_1]]: T[K_1]}` is the same as that of `{[K in keyof T]: T}`, since all we care about is
                 // inferring to the "type parameter" (or indexed access) shared by the constraint and template. So, to reduce the number of
-                // type identities produced, we simplify such indexed access occurences
+                // type identities produced, we simplify such indexed access occurrences
                 const newTypeParam = (type.constraintType.type as IndexedAccessType).objectType;
                 const newMappedType = replaceIndexedAccess(type.mappedType, type.constraintType.type as ReplaceableIndexedAccessType, newTypeParam);
                 inferredProp.links.mappedType = newMappedType as MappedType;
@@ -15772,7 +15772,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
         }
         else {
             // Parameter has no annotation
-            // By using a `DeferredType` symbol, we allow the type of this rest arg to be overriden by contextual type assignment so long as its type hasn't been
+            // By using a `DeferredType` symbol, we allow the type of this rest arg to be overridden by contextual type assignment so long as its type hasn't been
             // cached by `getTypeOfSymbol` yet.
             syntheticArgsSymbol.links.checkFlags |= CheckFlags.DeferredType;
             syntheticArgsSymbol.links.deferralParent = neverType;
@@ -15873,7 +15873,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                 }
             }
             // If this is a function or method declaration, get the signature from the @type tag for the sake of optional parameters.
-            // Exclude contextually-typed kinds because we already apply the @type tag to the context, plus applying it here to the initializer would supress checks that the two are compatible.
+            // Exclude contextually-typed kinds because we already apply the @type tag to the context, plus applying it here to the initializer would suppress checks that the two are compatible.
             result.push(
                 (!isFunctionExpressionOrArrowFunction(decl) &&
                     !isObjectLiteralMethod(decl) &&
@@ -16354,7 +16354,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
 
     // This function is used to propagate certain flags when creating new object type references and union types.
     // It is only necessary to do so if a constituent type might be the undefined type, the null type, the type
-    // of an object literal or a non-inferrable type. This is because there are operations in the type checker
+    // of an object literal or a non-inferable type. This is because there are operations in the type checker
     // that care about the presence of such types at arbitrary depth in a containing type.
     function getPropagatingFlagsOfTypes(types: readonly Type[], excludeKinds?: TypeFlags): ObjectFlags {
         let result: ObjectFlags = 0;
@@ -19164,7 +19164,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                     propTypes.push(propType);
                 }
                 else if (!accessNode) {
-                    // If there's no error node, we can immeditely stop, since error reporting is off
+                    // If there's no error node, we can immediately stop, since error reporting is off
                     return undefined;
                 }
                 else {
@@ -20483,7 +20483,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
         }
         if (instantiationDepth === 100 || instantiationCount >= 5000000) {
             // We have reached 100 recursive type instantiations, or 5M type instantiations caused by the same statement
-            // or expression. There is a very high likelyhood we're dealing with a combination of infinite generic types
+            // or expression. There is a very high likelihood we're dealing with a combination of infinite generic types
             // that perpetually generate new type identities, so we stop the recursion here by yielding the error type.
             tracing?.instant(tracing.Phase.CheckTypes, "instantiateType_DepthLimit", { typeId: type.id, instantiationDepth, instantiationCount });
             error(currentNode, Diagnostics.Type_instantiation_is_excessively_deep_and_possibly_infinite);
@@ -20960,7 +20960,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
     type ElaborationIterator = IterableIterator<{ errorNode: Node; innerExpression: Expression | undefined; nameType: Type; errorMessage?: DiagnosticMessage | undefined; }>;
     /**
      * For every element returned from the iterator, checks that element to issue an error on a property of that element's type
-     * If that element would issue an error, we first attempt to dive into that element's inner expression and issue a more specific error by recuring into `elaborateError`
+     * If that element would issue an error, we first attempt to dive into that element's inner expression and issue a more specific error by recurring into `elaborateError`
      * Otherwise, we issue an error on _every_ element which fail the assignability check
      */
     function elaborateElementwise(
@@ -21964,7 +21964,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                     case Diagnostics.Call_signatures_with_no_arguments_have_incompatible_return_types_0_and_1.code:
                     case Diagnostics.Construct_signatures_with_no_arguments_have_incompatible_return_types_0_and_1.code: {
                         if (path.length === 0) {
-                            // Don't flatten signature compatability errors at the start of a chain - instead prefer
+                            // Don't flatten signature compatibility errors at the start of a chain - instead prefer
                             // to unify (the with no arguments bit is excessive for printback) and print them back
                             let mappedMsg = msg;
                             if (msg.code === Diagnostics.Call_signatures_with_no_arguments_have_incompatible_return_types_0_and_1.code) {
@@ -22336,7 +22336,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
             if (!headMessage && maybeSuppress) {
                 // We suppress a call to `reportRelationError` or not depending on the state of the type checker, so
                 // we call `reportRelationError` here and then undo its effects to figure out what would be the diagnostic
-                // if we hadn't supress it, and save that as a canonical diagnostic for deduplication purposes.
+                // if we hadn't suppress it, and save that as a canonical diagnostic for deduplication purposes.
                 const savedErrorState = captureErrorCalculationState();
                 reportRelationError(headMessage, source, target);
                 let canonical;
@@ -29231,7 +29231,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                 // as a subtype of `{}`, and we need the type facts check because function types are subtypes of `object`,
                 // but are classified as "function" according to `typeof`.
                 isTypeRelatedTo(t, impliedType, strictSubtypeRelation) ? hasTypeFacts(t, facts) ? t : neverType :
-                    // We next check if the consituent is a supertype of the implied type. If so, we substitute the implied
+                    // We next check if the constituent is a supertype of the implied type. If so, we substitute the implied
                     // type. This handles top types like `unknown` and `{}`, and supertypes like `{ toString(): string }`.
                     isTypeSubtypeOf(impliedType, t) ? impliedType :
                     // Neither the constituent nor the implied type is a subtype of the other, however their domains may still
@@ -29843,7 +29843,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
      * unless you *really* want to *definitely* mark those as referenced.
      * These shouldn't be directly marked, and should only get marked transitively by the internals of this function.
      *
-     * @param location The location to mark js import refernces for
+     * @param location The location to mark js import references for
      * @param hint The kind of reference `location` has already been checked to be
      * @param propSymbol The optional symbol of the property we're looking up - this is used for property accesses when `const enum`s do not count as references (no `isolatedModules`, no `preserveConstEnums` + export). It will be calculated if not provided.
      * @param parentType The optional type of the parent of the LHS of the property access - this will be recalculated if not provided (but is costly).
@@ -30321,7 +30321,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
     }
 
     /**
-     * This part of `checkIdentifier` is kept seperate from the rest, so `NodeCheckFlags` (and related diagnostics) can be lazily calculated
+     * This part of `checkIdentifier` is kept separate from the rest, so `NodeCheckFlags` (and related diagnostics) can be lazily calculated
      * without calculating the flow type of the identifier.
      */
     function checkIdentifierCalculateNodeCheckFlags(node: Identifier, symbol: Symbol) {
@@ -36460,7 +36460,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                         );
                     }
                     if (hasSignatures) {
-                        // Bail early if we already found a siganture, no chance of "No constituent of type is callable"
+                        // Bail early if we already found a signature, no chance of "No constituent of type is callable"
                         break;
                     }
                 }
@@ -36770,7 +36770,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
         if (!cached) {
             // If we haven't already done so, temporarily reset the resolution stack. This allows us to
             // handle "inverted" situations where, for example, an API client asks for the type of a symbol
-            // containined in a function call argument whose contextual type depends on the symbol itself
+            // contained in a function call argument whose contextual type depends on the symbol itself
             // through resolution of the containing function call. By resetting the resolution stack we'll
             // retry the symbol type resolution with the resolvingSignature marker in place to suppress
             // the contextual type circularity.
@@ -38865,7 +38865,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
 
     function isAssignmentToReadonlyEntity(expr: Expression, symbol: Symbol, assignmentKind: AssignmentKind) {
         if (assignmentKind === AssignmentKind.None) {
-            // no assigment means it doesn't matter whether the entity is readonly
+            // no assignment means it doesn't matter whether the entity is readonly
             return false;
         }
         if (isReadonlySymbol(symbol)) {
@@ -42435,7 +42435,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                     // SyntaxKind.ElementAccessExpression - `thing["aField"] = 42;` or `thing["aField"];` (with a doc comment on it)
                     // or SyntaxKind.PropertyAccessExpression - `thing.aField = 42;`
                     // all of which are pretty much always values, or at least imply a value meaning.
-                    // It may be apprpriate to treat these as aliases in the future.
+                    // It may be appropriate to treat these as aliases in the future.
                     return DeclarationSpaces.ExportValue;
                 case SyntaxKind.MethodSignature:
                 case SyntaxKind.PropertySignature:
@@ -44001,7 +44001,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
                             container.kind === SyntaxKind.SourceFile);
 
                     // here we know that function scoped variable is "shadowed" by block scoped one
-                    // a var declatation can't hoist past a lexical declaration and it results in a SyntaxError at runtime
+                    // a var declaration can't hoist past a lexical declaration and it results in a SyntaxError at runtime
                     if (!namesShareScope) {
                         const name = symbolToString(localDeclarationSymbol);
                         error(node, Diagnostics.Cannot_initialize_outer_scoped_variable_0_in_the_same_scope_as_block_scoped_declaration_1, name, name);
@@ -49569,7 +49569,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
         const container = getSourceFileOfNode(symbol.valueDeclaration);
         const fileSymbol = container && getSymbolOfDeclaration(container);
         // Ensures cjs export assignment is setup, since this symbol may point at, and merge with, the file itself.
-        // If we don't, the merge may not have yet occured, and the flags check below will be missing flags that
+        // If we don't, the merge may not have yet occurred, and the flags check below will be missing flags that
         // are added as a result of the merge.
         void resolveExternalModuleSymbol(fileSymbol);
         const target = getExportSymbolOfValueSymbolIfExported(resolveAlias(symbol));

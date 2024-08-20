@@ -339,7 +339,7 @@ function createBuilderProgramState(
     let canCopySemanticDiagnostics = useOldState &&
         !compilerOptionsAffectSemanticDiagnostics(compilerOptions, oldCompilerOptions!);
     // We can only reuse emit signatures (i.e. .d.ts signatures) if the .d.ts file is unchanged,
-    // which will eg be depedent on change in options like declarationDir and outDir options are unchanged.
+    // which will eg be dependent on change in options like declarationDir and outDir options are unchanged.
     // We need to look in oldState.compilerOptions, rather than oldCompilerOptions (i.e.we need to disregard useOldState) because
     // oldCompilerOptions can be undefined if there was change in say module from None to some other option
     // which would make useOldState as false since we can now use reference maps that are needed to track what to emit, what to check etc
@@ -1276,7 +1276,7 @@ function getBuildInfo(state: BuilderProgramStateWithDefinedProgram): BuildInfo {
             pendingEmit: !state.programEmitPending ?
                 undefined : // Pending is undefined or None is encoded as undefined
                 state.programEmitPending === getBuilderFileEmit(state.compilerOptions) ?
-                false : // Pending emit is same as deteremined by compilerOptions
+                false : // Pending emit is same as determined by compilerOptions
                 state.programEmitPending, // Actual value
             errors: state.hasErrors ? true : undefined,
             checkPending: state.checkPending,

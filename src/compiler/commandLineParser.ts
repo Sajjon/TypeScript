@@ -3791,7 +3791,7 @@ const wildcardDirectoryPattern = /^[^*?]*(?=\/[^/]*[*?])/;
  * @param basePath The base path for any relative file specifications.
  * @param options Compiler options.
  * @param host The host used to resolve files and directories.
- * @param extraFileExtensions optionaly file extra file extension information from host
+ * @param extraFileExtensions optionally file extra file extension information from host
  *
  * @internal
  */

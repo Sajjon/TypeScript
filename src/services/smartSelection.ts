@@ -84,8 +84,8 @@ export function getSmartSelectionRange(pos: number, sourceFile: SourceFile): Sel
                 // 1. Blocks are effectively redundant with SyntaxLists.
                 // 2. TemplateSpans, along with the SyntaxLists containing them, are a somewhat unintuitive grouping
                 //    of things that should be considered independently.
-                // 3. A VariableStatement's children are just a VaraiableDeclarationList and a semicolon.
-                // 4. A lone VariableDeclaration in a VaraibleDeclaration feels redundant with the VariableStatement.
+                // 3. A VariableStatement's children are just a VariableDeclarationList and a semicolon.
+                // 4. A lone VariableDeclaration in a VariableDeclaration feels redundant with the VariableStatement.
                 // Dive in without pushing a selection range.
                 if (
                     isBlock(node)

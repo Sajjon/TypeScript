@@ -1727,7 +1727,7 @@ export let sys: System = (() => {
             if (platform === "win32" || platform === "win64") {
                 return false;
             }
-            // If this file exists under a different case, we must be case-insensitve.
+            // If this file exists under a different case, we must be case-insensitive.
             return !fileExists(swapCase(__filename));
         }
 

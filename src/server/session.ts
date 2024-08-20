@@ -312,7 +312,7 @@ function allEditsBeforePos(edits: readonly TextChange[], pos: number): boolean {
 // In TS 2.4 we switched to an enum, keep this for backward compatibility
 // The var assignment ensures that even though CommandTypes are a const enum
 // we want to ensure the value is maintained in the out since the file is
-// built using --preseveConstEnum.
+// built using --preserveConstEnum.
 /** @deprecated use ts.server.protocol.CommandTypes */
 export type CommandNames = protocol.CommandTypes;
 /** @deprecated use ts.server.protocol.CommandTypes */
