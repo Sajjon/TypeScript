@@ -17,7 +17,7 @@ import(getSpecifier());
 var p1 = import(ValidSomeCondition() ? "./0" : "externalModule");
 var p1: Promise<any> = import(getSpecifier());
 var p11: Promise<typeof defaultModule> = import(getSpecifier());
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath") as Promise<typeof defaultModule>;
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath") as Promise<typeof defaultModule>;
 p1.then(zero => {
     return zero.foo();  // ok, zero is any
 });
@@ -48,7 +48,7 @@ Promise.resolve(`${getSpecifier()}`).then(s => require(s));
 var p1 = Promise.resolve(`${ValidSomeCondition() ? "./0" : "externalModule"}`).then(s => require(s));
 var p1 = Promise.resolve(`${getSpecifier()}`).then(s => require(s));
 var p11 = Promise.resolve(`${getSpecifier()}`).then(s => require(s));
-const p2 = Promise.resolve(`${whatToLoad ? getSpecifier() : "defaulPath"}`).then(s => require(s));
+const p2 = Promise.resolve(`${whatToLoad ? getSpecifier() : "defaultPath"}`).then(s => require(s));
 p1.then(zero => {
     return zero.foo(); // ok, zero is any
 });

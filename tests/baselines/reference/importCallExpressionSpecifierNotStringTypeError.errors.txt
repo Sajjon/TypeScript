@@ -16,9 +16,9 @@ importCallExpressionSpecifierNotStringTypeError.ts(13,17): error TS7036: Dynamic
     var p1 = import(getSpecifier());
                     ~~~~~~~~~~~~~~
 !!! error TS7036: Dynamic import's specifier must be of type 'string', but here has type 'boolean'.
-    const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+    const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!!! error TS7036: Dynamic import's specifier must be of type 'string', but here has type 'boolean | "defaulPath"'.
+!!! error TS7036: Dynamic import's specifier must be of type 'string', but here has type 'boolean | "defaultPath"'.
     p1.then(zero => {
         return zero.foo();  // ok, zero is any
     });

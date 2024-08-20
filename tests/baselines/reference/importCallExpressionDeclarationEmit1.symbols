@@ -25,7 +25,7 @@ var p1 = import(getSpecifier());
 >p1 : Symbol(p1, Decl(importCallExpressionDeclarationEmit1.ts, 8, 3))
 >getSpecifier : Symbol(getSpecifier, Decl(importCallExpressionDeclarationEmit1.ts, 0, 0))
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath")
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath")
 >p2 : Symbol(p2, Decl(importCallExpressionDeclarationEmit1.ts, 9, 5))
 >whatToLoad : Symbol(whatToLoad, Decl(importCallExpressionDeclarationEmit1.ts, 1, 11))
 >getSpecifier : Symbol(getSpecifier, Decl(importCallExpressionDeclarationEmit1.ts, 0, 0))

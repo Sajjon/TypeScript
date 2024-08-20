@@ -45,7 +45,7 @@ var p11: Promise<typeof defaultModule> = import(getSpecifier());
 >defaultModule : Symbol(defaultModule, Decl(1.ts, 0, 6))
 >getSpecifier : Symbol(getSpecifier, Decl(1.ts, 0, 47))
 
-const p2 = import(whatToLoad ? getSpecifier() : "defaulPath") as Promise<typeof defaultModule>;
+const p2 = import(whatToLoad ? getSpecifier() : "defaultPath") as Promise<typeof defaultModule>;
 >p2 : Symbol(p2, Decl(1.ts, 13, 5))
 >whatToLoad : Symbol(whatToLoad, Decl(1.ts, 3, 11))
 >getSpecifier : Symbol(getSpecifier, Decl(1.ts, 0, 47))
