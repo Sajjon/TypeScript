@@ -5,7 +5,7 @@ var t1 = 10;
 var t2 = 10;
 var s;
 
-// TempateHead & TemplateTail are empty
+// TemplateHead & TemplateTail are empty
 `${t1 ** t2}`;
 `${t1 ** t2 ** t1}`;
 `${t1 + t2 ** t1}`;
@@ -32,7 +32,7 @@ var s;
 var t1 = 10;
 var t2 = 10;
 var s;
-// TempateHead & TemplateTail are empty
+// TemplateHead & TemplateTail are empty
 "".concat(Math.pow(t1, t2));
 "".concat(Math.pow(t1, Math.pow(t2, t1)));
 "".concat(t1 + Math.pow(t2, t1));

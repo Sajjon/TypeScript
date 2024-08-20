@@ -8,7 +8,7 @@ import {
 import { createServerHost } from "../helpers/virtualFileSystemWithWatch.js";
 
 describe("unittests:: tsserver:: projectImportHelpers::", () => {
-    it("import helpers sucessfully", () => {
+    it("import helpers successfully", () => {
         const type1 = {
             path: "/a/type.ts",
             content: `

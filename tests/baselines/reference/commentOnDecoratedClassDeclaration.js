@@ -14,7 +14,7 @@ class Remote { }
  */
 
 @decorator("hi")
-class AnotherRomote {
+class AnotherRemote {
     constructor() {}
 }
 
@@ -39,11 +39,11 @@ var Remote = /** @class */ (function () {
 /**
  * Floating Comment
  */
-var AnotherRomote = /** @class */ (function () {
-    function AnotherRomote() {
+var AnotherRemote = /** @class */ (function () {
+    function AnotherRemote() {
     }
-    AnotherRomote = __decorate([
+    AnotherRemote = __decorate([
         decorator("hi")
-    ], AnotherRomote);
-    return AnotherRomote;
+    ], AnotherRemote);
+    return AnotherRemote;
 }());

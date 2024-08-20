@@ -1,7 +1,7 @@
 //// [tests/cases/compiler/commentsClass.ts] ////
 
 //// [commentsClass.ts]
-/** This is class c2 without constuctor*/
+/** This is class c2 without constructor*/
 class c2 {
 } // trailing comment1
 var i2 = new c2();
@@ -75,7 +75,7 @@ class c9 {
 
 
 //// [commentsClass.js]
-/** This is class c2 without constuctor*/
+/** This is class c2 without constructor*/
 var c2 = /** @class */ (function () {
     function c2() {
     }
@@ -149,7 +149,7 @@ var c9 = /** @class */ (function () {
 
 
 //// [commentsClass.d.ts]
-/** This is class c2 without constuctor*/
+/** This is class c2 without constructor*/
 declare class c2 {
 }
 declare var i2: c2;

@@ -592,7 +592,7 @@ function withContext<T>(
     }
 
     /**
-     * Factor out expressions used extends clauses in classs definitions as a
+     * Factor out expressions used extends clauses in class definitions as a
      * variable and annotate type on the new variable.
      */
     function transformExtendsClauseWithExpression(classDecl: ClassDeclaration): DiagnosticAndArguments | undefined {

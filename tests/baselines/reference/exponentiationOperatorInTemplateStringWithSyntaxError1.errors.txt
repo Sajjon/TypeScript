@@ -51,7 +51,7 @@ exponentiationOperatorInTemplateStringWithSyntaxError1.ts(26,49): error TS17006:
     var s;
     
     // Error: early syntax error using ES7 SimpleUnaryExpression on left-hand side without ()
-    // TempateHead & TemplateTail are empty
+    // TemplateHead & TemplateTail are empty
     `${1 + typeof t1 ** t2 ** t1}`;
            ~~~~~~~~~
 !!! error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

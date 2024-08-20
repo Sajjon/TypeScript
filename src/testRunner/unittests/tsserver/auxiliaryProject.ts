@@ -92,7 +92,7 @@ describe("unittests:: tsserver:: auxiliaryProject::", () => {
                 export class Yargs { positional() { } }
             `,
             "/user/users/projects/myproject/node_modules/yargs/index.js": dedent`
-                // Specifically didnt have ./callback import to ensure that resolving module sepcifier adds the file to project at later stage
+                // Specifically didnt have ./callback import to ensure that resolving module specifier adds the file to project at later stage
                 export function command(cmd, cb) { cb(Yargs) }
             `,
             [indexFile.path]: indexFile.content,
@@ -148,7 +148,7 @@ describe("unittests:: tsserver:: auxiliaryProject::", () => {
                 export class Yargs { positional() { } }
             `,
             "/user/users/projects/myproject/node_modules/yargs/index.js": dedent`
-                // Specifically didnt have ./callback import to ensure that resolving module sepcifier adds the file to project at later stage
+                // Specifically didnt have ./callback import to ensure that resolving module specifier adds the file to project at later stage
                 export function command(cmd, cb) { cb(Yargs) }
             `,
             "/user/users/projects/myproject/folder/random.ts": dedent`

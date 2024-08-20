@@ -16,11 +16,11 @@ import {
 } from "../helpers/virtualFileSystemWithWatch.js";
 
 describe("unittests:: tsserver:: projectReferencesSourcemap:: with project references and tsbuild source map", () => {
-    const dependecyLocation = `/user/username/projects/myproject/dependency`;
-    const dependecyDeclsLocation = `/user/username/projects/myproject/decls`;
+    const dependencyLocation = `/user/username/projects/myproject/dependency`;
+    const dependencyDeclsLocation = `/user/username/projects/myproject/decls`;
     const mainLocation = `/user/username/projects/myproject/main`;
     const dependencyTs: File = {
-        path: `${dependecyLocation}/FnS.ts`,
+        path: `${dependencyLocation}/FnS.ts`,
         content: `export function fn1() { }
 export function fn2() { }
 export function fn3() { }
@@ -29,7 +29,7 @@ export function fn5() { }
 `,
     };
     const dependencyConfig: File = {
-        path: `${dependecyLocation}/tsconfig.json`,
+        path: `${dependencyLocation}/tsconfig.json`,
         content: jsonToReadableText({ compilerOptions: { composite: true, declarationMap: true, declarationDir: "../decls" } }),
     };
 
@@ -66,8 +66,8 @@ fn5();
         path: `/user/username/projects/myproject/random/tsconfig.json`,
         content: "{}",
     };
-    const dtsLocation = `${dependecyDeclsLocation}/FnS.d.ts`;
-    const dtsMapLocation = `${dependecyDeclsLocation}/FnS.d.ts.map`;
+    const dtsLocation = `${dependencyDeclsLocation}/FnS.d.ts`;
+    const dtsMapLocation = `${dependencyDeclsLocation}/FnS.d.ts.map`;
 
     const files = [dependencyTs, dependencyConfig, mainTs, mainConfig, libFile, randomFile, randomConfig];
 
@@ -485,7 +485,7 @@ fn5();
         });
     });
 
-    describe("when opening depedency and usage project: goToDef and rename", () => {
+    describe("when opening dependency and usage project: goToDef and rename", () => {
         verifyScenario({
             scenarioLocation: "dependencyAndUsage",
             scenario: "goToDef and rename locations",

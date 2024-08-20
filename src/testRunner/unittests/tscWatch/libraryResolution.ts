@@ -152,7 +152,7 @@ describe("unittests:: tsc-watch:: libraryResolution::", () => {
 
     verifyTscWatch({
         scenario: "libraryResolution",
-        subScenario: "unknwon lib",
+        subScenario: "unknown lib",
         sys: () => getSysForLibResolutionUnknown(),
         commandLineArgs: commandLineArgs(/*withoutConfig*/ undefined),
         edits: [

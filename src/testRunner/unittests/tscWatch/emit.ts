@@ -347,7 +347,7 @@ export var x = Foo();`,
         firstReloadFileList: [libFile.path, "/a/b/referenceFile1.ts", configFilePath],
         changes: [
             {
-                caption: "edit refereceFile1",
+                caption: "edit referenceFile1",
                 edit: sys => sys.appendFile("/a/b/referenceFile1.ts", "export var yy = Foo();"),
                 timeouts: sys => sys.runQueuedTimeoutCallbacks(),
             },

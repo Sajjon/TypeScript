@@ -60,7 +60,7 @@ var fooFunc = function FooFunctionValue(/** fooFunctionValue param */ b: string)
 >  : ^^^^^^
 }
 
-/// lamdaFoo var comment
+/// lambdaFoo var comment
 var lambdaFoo = /** this is lambda comment*/ (/**param a*/a: number, /**param b*/b: number) => a + b;
 >lambdaFoo : (a: number, b: number) => number
 >          : ^ ^^      ^^ ^^      ^^^^^^^^^^^

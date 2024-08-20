@@ -114,7 +114,7 @@ module TypeScriptAllInOne {
         }
 
         /// <summary>
-        /// Test different statements. Including if-else,swith,foreach,(un)checked,lock,using,try-catch-finally
+        /// Test different statements. Including if-else,switch,foreach,(un)checked,lock,using,try-catch-finally
         /// </summary>
         /// <param name="i"></param>
         /// <returns></returns>
@@ -404,7 +404,7 @@ var BasicFeatures = /** @class */ (function () {
         return 0;
     };
     /// <summary>
-    /// Test different statements. Including if-else,swith,foreach,(un)checked,lock,using,try-catch-finally
+    /// Test different statements. Including if-else,switch,foreach,(un)checked,lock,using,try-catch-finally
     /// </summary>
     /// <param name="i"></param>
     /// <returns></returns>

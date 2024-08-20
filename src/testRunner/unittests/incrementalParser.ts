@@ -56,7 +56,7 @@ function compareTrees(oldText: ts.IScriptSnapshot, newText: ts.IScriptSnapshot, 
     const incrementalNewTree = ts.updateLanguageServiceSourceFile(oldTree, newText, oldTree.version + ".", textChangeRange);
     Utils.assertInvariants(incrementalNewTree, /*parent:*/ undefined);
 
-    // We should get the same tree when doign a full or incremental parse.
+    // We should get the same tree when doing a full or incremental parse.
     Utils.assertStructuralEquals(newTree, incrementalNewTree);
 
     // We should also get the exact same set of diagnostics.

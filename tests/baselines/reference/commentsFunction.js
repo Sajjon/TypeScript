@@ -19,7 +19,7 @@ var fooFunc = function FooFunctionValue(/** fooFunctionValue param */ b: string)
     return b;
 }
 
-/// lamdaFoo var comment
+/// lambdaFoo var comment
 var lambdaFoo = /** this is lambda comment*/ (/**param a*/a: number, /**param b*/b: number) => a + b;
 var lambddaNoVarComment = /** this is lambda multiplication*/ (/**param a*/a: number, /**param b*/b: number) => a * b;
 lambdaFoo(10, 20);
@@ -74,7 +74,7 @@ fooWithParameters("a", 10);
 var fooFunc = function FooFunctionValue(/** fooFunctionValue param */ b) {
     return b;
 };
-/// lamdaFoo var comment
+/// lambdaFoo var comment
 var lambdaFoo = /** this is lambda comment*/ function (/**param a*/ a, /**param b*/ b) { return a + b; };
 var lambddaNoVarComment = /** this is lambda multiplication*/ function (/**param a*/ a, /**param b*/ b) { return a * b; };
 lambdaFoo(10, 20);

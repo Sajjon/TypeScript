@@ -9,7 +9,7 @@ class Foo {
         }
     }
     y() {
-        var lamda = (_this: number) => { // Error 
+        var lambda = (_this: number) => { // Error 
             return x => this;   // New scope.  So should inject new _this capture
         }
     }
@@ -25,7 +25,7 @@ class Foo {
         }
     }
     y1() {
-        var lamda = (_this: number) => { // No Error 
+        var lambda = (_this: number) => { // No Error 
         }
     }
     z1(_this: number) { // No Error 
@@ -108,7 +108,7 @@ var Foo = /** @class */ (function () {
     };
     Foo.prototype.y = function () {
         var _this_1 = this;
-        var lamda = function (_this) {
+        var lambda = function (_this) {
             return function (x) { return _this_1; }; // New scope.  So should inject new _this capture
         };
     };
@@ -124,7 +124,7 @@ var Foo = /** @class */ (function () {
         }
     };
     Foo.prototype.y1 = function () {
-        var lamda = function (_this) {
+        var lambda = function (_this) {
         };
     };
     Foo.prototype.z1 = function (_this) {

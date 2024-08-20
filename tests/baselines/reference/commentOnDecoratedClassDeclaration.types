@@ -32,8 +32,8 @@ class Remote { }
 >"hi" : "hi"
 >     : ^^^^
 
-class AnotherRomote {
->AnotherRomote : AnotherRomote
+class AnotherRemote {
+>AnotherRemote : AnotherRemote
 >              : ^^^^^^^^^^^^^
 
     constructor() {}

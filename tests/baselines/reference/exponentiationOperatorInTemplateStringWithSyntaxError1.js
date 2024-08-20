@@ -6,7 +6,7 @@ var t2 = 10;
 var s;
 
 // Error: early syntax error using ES7 SimpleUnaryExpression on left-hand side without ()
-// TempateHead & TemplateTail are empty
+// TemplateHead & TemplateTail are empty
 `${1 + typeof t1 ** t2 ** t1}`;
 `${-t1 ** t2 - t1}`;
 `${-++t1 ** t2 - t1}`;
@@ -33,7 +33,7 @@ var t1 = 10;
 var t2 = 10;
 var s;
 // Error: early syntax error using ES7 SimpleUnaryExpression on left-hand side without ()
-// TempateHead & TemplateTail are empty
+// TemplateHead & TemplateTail are empty
 "".concat(1 + Math.pow(typeof t1, Math.pow(t2, t1)));
 "".concat(Math.pow(-t1, t2) - t1);
 "".concat(Math.pow(-++t1, t2) - t1);
